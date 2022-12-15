@@ -26,14 +26,14 @@ public class GenericMethod {
         //4-öğrenci harf notlarını sıralayınız
 
     }
-    //-diziyi yazdıran bir method yazınız.
+    //-diziyi yazdıran bir method yazınız.PRint oldugu icin data tipini void yaptik
     public static <T> void printArray (T [] array){
         for (int i = 0; i< array.length;i++){
             System.out.println(array[i] + " ");
         }
 
     }
-    public static <T extends Comparable> T[] orderArr(T[] array){
+    public static <T extends Comparable> T[] orderArr(T[] array){//Burada data tipi arraydir. bize array dondurur.
         for(int i = 0; i< array.length;i++){
             for (int j=i;j< array.length;j++){
                 if (array[i].compareTo(array[j])>0){
