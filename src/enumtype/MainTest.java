@@ -4,6 +4,7 @@ public class MainTest {
     public static void main(String[] args) {
         useConstantMethod(1);//CTE vermedi.
         useEnum(TransactionType.DEPOSIT);//CTE verdi.
+
     }
      //Eski tarz
      private static void useConstantMethod (int i) {
@@ -32,5 +33,14 @@ public class MainTest {
         } else if (transactionType == TransactionType.OTHER) {
             System.out.println("Money is not used");
         }
+
+        //Enuma has degerler
+        System.out.println("Enum Name : " + transactionType.name());//Enum ismini ekrana yazdim
+        System.out.println("Enum degeri : " + transactionType.getTransactionCode());//Numeric degerini verir
+        System.out.println("Enum Ordinal : " + transactionType.ordinal());
+
+
     }
+
+
 }
