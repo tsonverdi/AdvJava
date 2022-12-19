@@ -23,14 +23,14 @@ public class SchoolManagement {
 
     public static void deleteStudent (Student std, User user){
         if(user.getRole().equals(Role.ROLE_ADMIN) || user.getRole().equals(Role.ROLE_TEACHER)){
-            System.out.println("Ogrenci basari ile silindi " + user.getRole().name);
+            System.out.println("Ogrenci basari ile silindi " + user.getRole().getName());
         }else {
-            System.out.println(user.getRole().name + " is not permitted to delete Student.");
+            System.out.println(user.getRole().getName() + " is not permitted to delete Student.");
         }
     }
     public static void deleteTeacher(Teacher teacher, User user){
         if (user.getRole().equals(Role.ROLE_ADMIN)){
-            System.out.println("Ogrenci basari ile silindi" + user.getRole().name);
+            System.out.println("Ogrenci basari ile silindi" + user.getRole().getName());
         }else {
             System.out.println(user.getRole().name + " is not permitted to delete Teacher.");
         }
